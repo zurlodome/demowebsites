@@ -1,3 +1,31 @@
 /*============================================================================================*/
 /* Your custom styles below */
 /*============================================================================================*/
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.back-to-top:hover {
+    background-color: #6a706c;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.img-logo {
+    max-width: 100%;
+    height: auto;
+}
