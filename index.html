@@ -374,6 +374,7 @@
                                         <textarea class="form-control" placeholder="Message" id="message_contact" name="message_contact"></textarea>
                                         <label for="message_contact" data-translate="message">Messaggio</label>
                                     </div>
+                                    <input type="hidden" name="lang_selected" id="lang_selected" value="Italian">
                                     <hr>
                                     <div class="row">
                                         <div class="col-md-6 mb-4">
@@ -555,6 +556,7 @@
 
             langSelector.addEventListener('change', function() {
                 updateLanguage(this.value);
+                document.getElementById('lang_selected').value = this.value;
             });
 
             // Imposta la lingua predefinita su Italiano
