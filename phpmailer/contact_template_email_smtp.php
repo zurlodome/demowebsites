@@ -16,14 +16,14 @@ try {
     $mail->isSMTP();                                            // Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                           // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'username';                             // SMTP username
+    $mail->Username   = 'dome.zurlo@gmail.com';                             // SMTP username
     $mail->Password   = 'eawh hrrf zend cqrs';                             // SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
      //Recipients - main edits
-    $mail->setFrom('postmaster@suitegrottadellaluna.it', 'Message from Grotta della luna suite');             // Email Address and Name FROM
-    $mail->addAddress('postmaster@suitegrottadellaluna.it', '');                  // Email Address and Name TO - Name is optional
+    $mail->setFrom('suitegrottadellaluna@gmail.com', 'Message from Grotta della luna suite');             // Email Address and Name FROM
+    $mail->addAddress('suitegrottadellaluna@gmail.com', '');                  // Email Address and Name TO - Name is optional
     $mail->addReplyTo('noreply@domain.com', 'Message from Grotta della luna suite');       // Email Address and Name NOREPLY
     $mail->isHTML(true);                                                       
     $mail->Subject = 'Message from Grotta della luna suite';                                // Email Subject       
