@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Suite Grotta della Luna - Bed and Breakfast in Ostuni" data-translate="meta_description">
+    <meta name="description" content="Suite Grotta della Luna - Ostuni" data-translate="meta_description">
     <meta name="author" content="Domenico Zurlo">
-    <title data-translate="page_title">Suite Grotta della Luna - Bed and Breakfast</title>
+    <title data-translate="page_title">Suite Grotta della Luna - Ostuni</title>
     
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -31,6 +31,13 @@
 
 <body data-bs-spy="scroll" data-bs-offset="120" data-bs-target="#mainNav"> 
 
+    <!-- Sito in costruzione banner -->
+    <div style="width:100%;background:#ff9c07;color:#222;text-align:center;padding:10px 0;position:fixed;top:0;left:0;z-index:2000;font-weight:bold;letter-spacing:1px;">
+        🚧 Questo sito è in costruzione. Alcuni contenuti potrebbero non essere definitivi. 🚧
+    </div>
+    <div style="height:40px"></div>
+    <!-- /Sito in costruzione banner -->
+
     <div id="preloader">
         <div data-loader="circle-side"></div>
     </div><!-- /Page Preload -->
@@ -40,7 +47,8 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-3 col-5">
-                    <a href="index.html" class="logo_image"><img src="img/img_logo.png" width="140" height="140" alt="Suite Grotta della Luna Logo" style="border-radius: 50%;"></a>
+                    <a href="index.html" class="logo_image"><img src="img/img_logo.png" width="100" height="100" alt="Suite Grotta della Luna Logo" style="border-radius: 50%;"></a>
+                    <br> 
                     <a href="index.html" class="logo_normal"><img src="img/logo_sticky_grotta_della_luna.svg" width="200" height="40" alt="" class="img-logo"></a>
                     <a href="index.html" class="logo_sticky"><img src="img/logo_grotta_della_luna.svg" width="200" height="40" alt="" class="img-logo"></a>
                 </div>
@@ -104,7 +112,7 @@
                     </div>
                 </div>
                 <!--/owl-slide-->
-                <div class="owl-slide background-image cover" data-background="url(img/slides/test_home.jpg)">
+                <div class="owl-slide background-image cover" data-background="url(img/slides/Ostuni.jpeg)">
                     <div class="opacity-mask d-flex align-items-center" data-opacity-mask="rgba(0, 0, 0, 0.6)">
                         <div class="container">
                             <div class="row justify-content-center justify-content-md-end">
@@ -331,7 +339,7 @@
                         <div class="tab-pane fade show active" id="second_tab_pane" role="tabpanel" aria-labelledby="second_tab" tabindex="0">
                             <div class="contacts_wrapper">
                                 <div id="message-contact"></div>
-                                <form method="post" action="phpmailer/contact_template_email.php" id="contactform" autocomplete="off">
+                                <form method="post" action="phpmailer/contact_template_email_smtp.php" id="contactform" autocomplete="off">
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-floating mb-4">
@@ -431,8 +439,8 @@
 
             const translations = {
                 'English': {
-                    'page_title': 'Suite Grotta della Luna - Bed and Breakfast',
-                    'meta_description': 'Suite Grotta della Luna - Bed and Breakfast in Ostuni',
+                    'page_title': 'Suite Grotta della Luna - Ostuni',
+                    'meta_description': 'Suite Grotta della Luna - Ostuni',
                     'about': 'About',
                     'rooms': 'Rooms',
                     'gallery': 'Gallery',
@@ -483,14 +491,14 @@
                     'breakfast_included_desc': 'Start your day with a delicious breakfast included in your stay.',
                 },
                 'Italian': {
-                    'page_title': 'Suite Grotta della Luna - Bed and Breakfast',
-                    'meta_description': 'Suite Grotta della Luna - Bed and Breakfast a Ostuni',
+                    'page_title': 'Suite Grotta della Luna - Ostuni',
+                    'meta_description': 'Suite Grotta della Luna - Ostuni',
                     'about': 'Chi Siamo',
                     'rooms': 'Camere',
                     'gallery': 'Galleria',
                     'contacts': 'Contatti',
                     'carousel_title_1': 'Suite Grotta della Luna',
-                    'carousel_subtitle_1': 'Vivi un\' esperienza esclusiva in un luogo senza tempo',
+                    'carousel_subtitle_1': 'Un\' esperienza esclusiva in un luogo senza tempo',
                     'carousel_title_2': 'Suite Grotta della Luna',
                     'carousel_subtitle_2': 'Un soggiorno unico nel cuore della città bianca',
                     'carousel_title_3': 'Suite Grotta della Luna',

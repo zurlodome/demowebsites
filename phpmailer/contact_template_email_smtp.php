@@ -14,19 +14,19 @@ try {
 
     //Server settings
     $mail->isSMTP();                                            // Send using SMTP
-    $mail->Host       = 'smtpserver';                           // Set the SMTP server to send through
+    $mail->Host       = 'smtp.gmail.com';                           // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'username';                             // SMTP username
-    $mail->Password   = 'password';                             // SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-    $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+    $mail->Password   = 'eawh hrrf zend cqrs';                             // SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+    $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
      //Recipients - main edits
-    $mail->setFrom('info@domain.com', 'Message from B&B');             // Email Address and Name FROM
-    $mail->addAddress('info@domain.com', 'Jhon Doe');                  // Email Address and Name TO - Name is optional
-    $mail->addReplyTo('noreply@domain.com', 'Message from B&B');       // Email Address and Name NOREPLY
+    $mail->setFrom('postmaster@suitegrottadellaluna.it', 'Message from Grotta della luna suite');             // Email Address and Name FROM
+    $mail->addAddress('postmaster@suitegrottadellaluna.it', '');                  // Email Address and Name TO - Name is optional
+    $mail->addReplyTo('noreply@domain.com', 'Message from Grotta della luna suite');       // Email Address and Name NOREPLY
     $mail->isHTML(true);                                                       
-    $mail->Subject = 'Message from B&B';                                // Email Subject       
+    $mail->Subject = 'Message from Grotta della luna suite';                                // Email Subject       
 
     // Email verification, do not edit
     function isEmail($email_contact ) {

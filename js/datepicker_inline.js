@@ -39,40 +39,42 @@ $(function() {
       });
 
       /* Configuration picker */
-      const picker = new easepick.create({
-        element: document.getElementById('date_booking'),
-        css: [
-          'css/daterangepicker_v2.css',
-        ],
-        lang: 'en-EN', // Language tags https://www.techonthenet.com/js/language_tags.php
-        format: "DD/MM/YYYY",
-        calendars: 2,
-        grid: 2,
-        zIndex: 10,
-        inline: true,
-        plugins: ['LockPlugin', 'RangePlugin'],
-        RangePlugin: {
-          tooltipNumber(num) {
-            return num - 1;
+      const dateBookingElement = document.getElementById('date_booking');
+      if (dateBookingElement) { // Verifica che l'elemento esista
+        const picker = new easepick.create({
+          element: dateBookingElement,
+          css: [
+            'css/daterangepicker_v2.css',
+          ],
+          lang: 'en-EN', // Language tags https://www.techonthenet.com/js/language_tags.php
+          format: "DD/MM/YYYY",
+          calendars: 2,
+          grid: 2,
+          zIndex: 10,
+          inline: true,
+          plugins: ['LockPlugin', 'RangePlugin'],
+          RangePlugin: {
+            tooltipNumber(num) {
+              return num - 1;
+            },
+            locale: {
+              one: 'night',
+              other: 'nights',
+            },
           },
-          locale: {
-            one: 'night',
-            other: 'nights',
-          },
-        },
-        LockPlugin: {
-          minDate: new Date(),
-          minDays: 1,
-          inseparable: false,
-          filter(date, picked) {
-            if (picked.length === 1) {
-              const incl = date.isBefore(picked[0]) ? '[)' : '(]';
-              return !picked[0].isSame(date, 'day') && date.inArray(bookedDates, incl);
+          LockPlugin: {
+            minDate: new Date(),
+            minDays: 1,
+            inseparable: false,
+            filter(date, picked) {
+              if (picked.length === 1) {
+                const incl = date.isBefore(picked[0]) ? '[)' : '(]';
+                return !picked[0].isSame(date, 'day') && date.inArray(bookedDates, incl);
+              }
+              return date.inArray(bookedDates, '[)');
             }
-            return date.inArray(bookedDates, '[)');
-          }
-        },
-      });
-
+          },
+        });
+      }
     }); // End Easypick config
   });
